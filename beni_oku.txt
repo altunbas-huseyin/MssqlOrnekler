@@ -1,0 +1,1 @@
+ornekler.sql dosyasını Mssql'de çalıştır, örnek trigger ve storce procedurler oluşacak senin için.
