@@ -78,13 +78,18 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROC [dbo].[SpUyeInsert]
+
+
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'SpUyeInsert')
+DROP PROCEDURE SpUyeInsert
+GO
+
+create PROC SpUyeInsert
 (@ad nVarchar(MAX),@soyad nVarchar(MAX))
 AS
-BEGIN
-   insert into Uyeler(ad,soyad) values(@ad,@soyad)
-END
- return 1;
+   Begin
+      insert into Uyeler(ad,soyad) values(@ad,@soyad)
+   End
 
 
  
