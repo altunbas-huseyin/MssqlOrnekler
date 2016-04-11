@@ -1,10 +1,9 @@
-declare @TableName sysname = 'Uyeler'
+declare @TableName sysname = 'LG_XT501_001'
 declare @Result varchar(max) = 'public class ' + @TableName + '
 {'
 
 select @Result = @Result + '
-    public ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }
-'
+    public ' + ColumnType + NullableSign + ' ' + ColumnName + ' { get; set; }'
 from
 (
     select 
